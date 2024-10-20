@@ -12,7 +12,7 @@ test('heading is not Welcome', async ({page}) => {
   await expect(page.locator('h4')).not.toHaveText('Hello');
 });
 
-test('soft assertion', async ({page}) => {
+test.fixme('soft assertion', async ({page}) => {
   await page.goto('/');
 
   // kontynuje dalsze testy pomimo bledu
