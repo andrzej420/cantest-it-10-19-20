@@ -144,7 +144,7 @@ const EventList = ({ currentUser }) => {
     const dataviewHeader = (
         <div className="grid grid-nogutter">
             <div className="col-6" style={{ textAlign: 'left' }}>
-                <Button label="New" icon="pi pi-plus" className="p-button-success mr-2" onClick={() => open(null)} />
+                <Button label="New" icon="pi pi-plus" className="p-button-success mr-2" onClick={() => open(null)} data-testid="add-event-button" />
             </div>
             <div className="col-6" style={{ textAlign: 'right', flexDirection: 'row', display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
                 <InputText style={{ marginRight: 8 }} type="search" data-testid="search-input" onInput={(e: React.ChangeEvent<HTMLInputElement>) => setSearchText(e.target.value)} placeholder="Search..." />                <DataViewLayoutOptions layout={layout} onChange={(e) => setLayout(e.value)} />
@@ -155,7 +155,7 @@ const EventList = ({ currentUser }) => {
     const eventDialogFooter = (
         <>
             <Button label="Cancel" icon="pi pi-times" className="p-button-text" onClick={hideDialog} />
-            <Button label="Save" icon="pi pi-check" className="p-button-text" onClick={saveEvent} />
+            <Button data-testid="save-event-button" label="Save" icon="pi pi-check" className="p-button-text" onClick={saveEvent} />
         </>
     );
 
