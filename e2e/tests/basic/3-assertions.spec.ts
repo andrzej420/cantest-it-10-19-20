@@ -23,7 +23,7 @@ test('soft assertion', async ({page}) => {
   await page.waitForTimeout(1);
 });
 
-test.only('custom message', async ({page}) => {
+test.skip('custom message', async ({page}) => {
   await page.goto('/');
 
   await expect(page.locator('h4'), 'Heading should be Welcome').toHaveText('Hello');

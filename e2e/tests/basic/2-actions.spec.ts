@@ -24,7 +24,7 @@ test('button click', async ({ page }) => {
   await page.waitForTimeout(1);
 });
 
-test.only('get input value / text', async ({page}) => {
+test('get input value / text', async ({page}) => {
   await page.goto('/');
 
   await page.getByTestId('login-input').fill('user');
